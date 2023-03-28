@@ -30,7 +30,7 @@ rbf
   4) 5e-5 for epoch [150, 180)
   5) 2.5e-5 for epoch [180, 200]
  * Reduction: 1 (for regular model), 2 (for quotient model)
- * g ($g=\frac{z}{q}$,$z$:number of input fields, $q$:partition number): 4
+ * g ($g=\frac{z}{q}$, $z$:number of input fields, $q$:partition number): 4
  * dropout rate: 0.1
  * s (groups number, should be exactly divisible by g):4 for $C_{16}$ regular model, 1 for quotient and $D_{16|5}C_{16}$ model.
 
