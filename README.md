@@ -32,7 +32,7 @@ rbf
  * Reduction: 1 (for regular model), 2 (for quotient model)
  * g ($g=\frac{z}{q}$,$z$:number of input fields, $q$:partition number): 4
  * dropout rate: 0.1
- * s (groups number):4 for $C_{16}$ regular model, 1 for quotient and $D_{16|5}C_{16}$ model.
+ * s (groups number, should be exactly divisible by g):4 for $C_{16}$ regular model, 1 for quotient and $D_{16|5}C_{16}$ model.
 
 
 #### 1. MNIST-rot
@@ -54,3 +54,16 @@ CUDA_VISIBLE_DEVICES=0 python train_mnist.py  --model Q  --dis gauss --g 4 --s 1
  CUDA_VISIBLE_DEVICES=0 python train_mnist.py --model R --dis gauss --flip True --g 4 --s 1  --reduction 1 
 </pre>
 
+## Citations
+
+```bibtex
+@inproceedings{
+he2023neural,
+title={Neural e{PDO}s: Spatially Adaptive Equivariant Partial Differential Operator Based  Networks},
+author={Lingshen He and Yuxuan Chen and Zhengyang Shen and Yibo Yang and Zhouchen Lin},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=D1Iqfm7WTkk}
+}
+
+```
